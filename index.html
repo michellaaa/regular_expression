@@ -132,6 +132,22 @@
       }
     });
 
+    // Toggle password visibility
+    document.getElementById("togglePassword").addEventListener("click", function() {
+      const passwordInput = document.getElementById("password");
+      const icon = document.querySelector("#togglePassword i");
+
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        icon.classList.remove("fi-rr-eye");
+        icon.classList.add("fi-rr-eye-crossed");
+      } else {
+        passwordInput.type = "password";
+        icon.classList.remove("fi-rr-eye-crossed");
+        icon.classList.add("fi-rr-eye");
+      }
+    });
+
   </script>
 
 </body>
